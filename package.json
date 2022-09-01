@@ -1,0 +1,31 @@
+{
+  "name": "navbar_csshtmljsonly",
+  "version": "1.0.0",
+  "description": "NavBar component made with HTML, CSS, JavaScript and jQuery only",
+  "main": "./src/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cecortes/NavBar_CssHtmlJsOnly.git"
+  },
+  "keywords": [
+    "NavBar",
+    "Components",
+    "JS",
+    "jQuery",
+    "CSS",
+    "HTML5"
+  ],
+  "author": "César López",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cecortes/NavBar_CssHtmlJsOnly/issues"
+  },
+  "homepage": "https://github.com/cecortes/NavBar_CssHtmlJsOnly#readme",
+  "dependencies": {
+    "boxicons": "^2.1.2",
+    "jquery": "^3.6.1"
+  }
+}
