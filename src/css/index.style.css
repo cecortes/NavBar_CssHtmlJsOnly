@@ -1,3 +1,56 @@
 /** Imports */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap");
 @import url("./node_modules/boxicons/css/boxicons.css");
+
+/** Variables */
+:root {
+  --color-pri: #a7d129;
+  --color-sec: #f8eeb4;
+  --color-bg: #1b1919;
+  --color-drk: #616f39;
+  --color-lgt: #cfee91;
+  --font-pri: "Raleway", sans-serif;
+  --font-icon: "boxicons";
+}
+
+/** Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-pri);
+  font-size: 18pt;
+  background-color: var(--color-bg);
+  color: var(--color-pri);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-pri);
+  transition: color 0.7s ease, background-color 0.5s ease;
+}
+
+a:hover {
+  background-color: var(--color-lgt);
+  color: var(--color-drk);
+}
+
+/** Header */
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-bg);
+}
+
+#nav {
+  width: 275px;
+  height: calc(100vh - 70px);
+  padding: 1rem 2rem;
+  background-color: var(--color-drk);
+}
