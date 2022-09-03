@@ -1,6 +1,6 @@
 /** Imports */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap");
-/*@import url("./node_modules/boxicons/css/boxicons.css");*/
+@import url("./node_modules/boxicons/css/boxicons.css");
 
 /** Variables */
 :root {
@@ -29,14 +29,14 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: var(--color-pri);
   transition: color 0.7s ease, background-color 0.5s ease;
+  text-decoration: none;
 }
 
-a:hover {
-  background-color: var(--color-lgt);
-  color: var(--color-drk);
+ul {
+  list-style: none;
+  text-decoration: none;
 }
 
 /** Header */
@@ -115,8 +115,49 @@ a:hover {
   color: var(--color-drk);
 }
 
-#nav {
+.navbar {
   display: none;
+}
+
+.panel--active {
+  display: grid;
+  grid-template-columns: max-content;
+  position: fixed;
+  right: 0;
+  top: 70px;
+  overflow-y: auto;
+  background-color: var(--color-drk);
+  animation: slide-in 0.3s ease-in-out;
+  opacity: 0.8;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/** Menu Items */
+.menu-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  max-width: 80%;
+  margin: 20px 5px 20px 10px;
+  padding: 0 20px;
+  transition: color 0.7s ease-in-out, scale 0.3s ease-in-out;
+  text-decoration: none;
+  list-style: none;
+}
+
+.menu-items:hover {
+  border-bottom: 1px solid var(--color-pri);
+  cursor: pointer;
+  scale: 1.1;
 }
 
 /** Small Screen */
@@ -138,7 +179,7 @@ a:hover {
     font-size: 18pt;
   }
 
-  #nav {
+  .navbar {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -149,7 +190,7 @@ a:hover {
     font-size: 18pt;
   }
 
-  #nav > ul {
+  .navbar > ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -159,8 +200,19 @@ a:hover {
     height: 100%;
     list-style: none;
   }
-}
 
-.hide {
-  display: none;
+  .menu-items {
+    width: auto;
+    transition: all 0.5 ease-in-out;
+  }
+
+  .menu-items > a {
+    transition: all 0.5 ease-in-out;
+  }
+
+  .menu-items > a:hover {
+    color: var(--color-sec);
+    border-bottom: none;
+    scale: 1;
+  }
 }
